@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/mtulogo-min.png">
+  <link rel="icon" type="image/png" href="./images/mtulogo-min.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <title>
+    Student's Manipur Technical University
+  </title>
+  
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="./modal.css">
+  <!-- Spinner-Grow from BS4 -->
+  <link rel="stylesheet" href="./remStyle.css">
+   <script src="rotate.js"></script>
+   <script src="./remJs.js"></script>
+   <!--AOS-->
+   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+   <style>
+      marquee{
+        padding: 5px;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 0px;
+        margin-top: 5px;
+        border-radius: 3px;
+      }
+      #marq{
+        display: none;
+      }
+
+      @media screen and (min-width: 480px) {
+        #marq{
+          display: none;
+        }
+      }
+     </style>
+   
+ 
+  
+</head>
+
+<body class="index-page bg-dark sidebar-collapse">
+  
+    <div id="main" >
+  <nav class="navbar bg-dark navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="6" id="sectionsNav">
+    
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/mtulogo.webp" alt="Circle Image" class="rounded-circle" style="height: 140%;width: auto;"> </a>
+            <span class="nav-item">
+                <h4 id="dis_time" style="font-weight: bold;"></h4> <!--Display time here -->
+            </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <i class="material-icons">apps</i> Notifications
+            </a>
+            <div class="dropdown-menu dropdown-with-icons">
+              <a href="http://mtu.ac.in/admission-notice/" class="dropdown-item">
+                <i class="material-icons">layers</i> Admission Notice
+              </a>
+              <a href="http://mtu.ac.in/general-notice/" class="dropdown-item">
+                <i class="material-icons">content_paste</i> General Notice
+              </a>
+              <a  class="dropdown-item" onclick="scrollToTimeTable()">
+                <i class="fa fa-table mr-4"></i> Time Table
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://14.139.203.242/" >
+              <i class="material-icons">login</i> MTU Portal
+            </a>
+          </li>
+          <li class="nav-item" onmouseover="this.style.cursor='pointer'">
+            <a class="nav-link" onclick="changePortrait();" >
+              <i class="fa fa-window-maximize"></i><span id="fs">Turn ON Fullscreen</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/pg/manipurtechnicaluniversity/" target="_blank" data-original-title="Like us on Facebook" rel="nofollow">
+              <i class="fa fa-facebook-square"></i><span class="hideOnPC"> Facebook</span>
+            </a>
+          </li>
+      <!--   <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="#" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
+              <i class="fa fa-instagram"></i><span class="hideOnPC"> Instagram</span>
+            </a> 
+        -->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <span>
+      <marquee id="marq">Classes will be commenced from 11 Oct 2021 (Monday) </marquee></span>
+  </nav>
+  <!--Navbar ends-->
+  
+  <div class="page-header header-filter clear-filter yourcolor-filter" data-parallax="true" style="background-image: url('./assets/img/bg2.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="brand">
+            <h1 data-aos="fade-up-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="800" style="font-family:cursive;">Student's MTU</h1>
+            <h3 data-aos="fade-right" data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"><code class="text-white">The best way to predict your future is to create it.</code></h3>
+            <code data-aos="fade-in-left" data-aos-duration="5000" class="text-muted"> - Abraham Lincoln</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Body-->
+  <div class="main bg-dark main-raised">
+        <div class="container p-2 pb-5 pl-5 pr-5">
+            <div class="title">
+                <h3 class="text-center title" style="color: #f5f3f0;">Quick Links</h3>
+              </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <a target="_blank" href="http://mtu.ac.in/e-classroom-3/#1619001481616-1fcae7a5-d8df">
+                        <button replaceThisWith(data-aos)="fade-right" class="btn btn-block btn-info btn-round">
+                            <i class="material-icons">class</i>E-Classroom
+                        </button>
+                     </a>
+                </div>
+                <div class="col-sm-3">
+                    <a target="_blank" href="https://online.mtu.ac.in/">
+                        <button replaceThisWith(data-aos)="zoom-in-left" class="btn btn-block btn-primary btn-round">
+                             <i class="material-icons">money</i> Fee Payment
+                        </button>
+                     </a>
+                </div>
+                <div class="col-sm-3">
+                    <a  target="_blank" href="http://mtu.ac.in/online-forms/">
+                        <button replaceThisWith(data-aos)="zoom-in-right" class="btn btn-block btn-success btn-round">
+                             <i class="fa fa-wpforms"></i> Online Forms
+                        </button>
+                     </a>
+                </div>
+                <div class="col-sm-3">
+                    <a target="_blank" href="http://mtu.ac.in/">
+                        <button replaceThisWith(data-aos)="flip-left" class="btn  btn-block btn-danger btn-round">
+                             <i class="material-icons">web</i> MTU Website
+                        </button>
+                     </a>
+                </div>
+            </div>
+
+
+            <div class="title">
+                <h3 replaceThisWith(data-aos)="flip-right" class="text-center title text-success">Exam results</h3>
+              </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <a target="_blank" href="http://mtu.ac.in/exam-results/">
+                        <button replaceThisWith(data-aos)="zoom-in-left" class="btn  btn-block btn-primary btn-round">
+                            <i class="fa fa-file-text-o"></i> Exam Results
+                        </button>
+                     </a>
+                </div>
+                <div class="col-sm-3">
+                    <a target="_blank" href="http://mtu.ac.in/timetable/">
+                        <button replaceThisWith(data-aos)="flip-left"
+                        replaceThisWith(data-aos)-easing="ease-out-cubic"
+                        replaceThisWith(data-aos)-duration="600" class="btn btn-block btn-info btn-round section-timetable">
+                            <i class="fa fa-table"></i> Time Table
+                        </button>
+                     </a>
+                </div>
+            </div>
+            <div class="title">
+                <h3 replaceThisWith(data-aos)="fade-right" class="text-center title text-info">CSE 5th Semester Only</h3>
+              </div>
+            <div class="row">
+                <div class="col-sm-3" id="modals">
+                    <button replaceThisWith(data-aos)="zoom-out-down" class="btn btn-block btn-success" data-toggle="modal" data-target="#myModal">
+                      <i class="material-icons">library_books</i>
+                      Ongoing Class
+                      <span id="spin" class="spinner-grow spinner-grow-sm bg-danger" style="visibility: hidden;"></span>
+                    </button>
+               </div>
+               <div class="col-sm-3">
+                <button id="tt4sem" replaceThisWith(data-aos)="fade-in-left" class="btn btn-block btn-info" data-toggle="Imodal" data-target="#myImgModal">
+                  <i class="material-icons">library_books</i>
+                  Class Time Table
+                </button>
+           </div>
+                <!-- <div class="col-sm-3">
+                    <a href="#">
+                        <button id="ttexm"  replaceThisWith(data-aos)="zoom-in" class="btn btn-block btn-primary btn-round">
+                            Display Exam Time Table
+                        </button>
+                     </a>
+                </div> -->
+                <div class="col-sm-3">
+                  <a target="_blank" href="https://classroom.google.com/u/1/h">
+                      <button   replaceThisWith(data-aos)="zoom-in-right" class="btn btn-block btn-danger btn-round">
+                          Google Classroom
+                      </button>
+                   </a>
+              </div>
+            </div>
+            <div class="title">
+              <h3 replaceThisWith(data-aos)="fade-right" class="text-center title text-success">Extra Features</h3>
+            </div>
+            <div class="row">
+            <div class="col-sm-3">
+                      <button  id="waMessage" data-toggle="modal" data-target="#Rem" replaceThisWith(data-aos)="zoom-in-right" class="btn btn-block btn-danger btn-round">
+                        <i class="fa fa-whatsapp"></i>
+                          Send WhatsApp Message
+                      </button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+    <div class="container-fluid " replaceThisWith(data-aos)="fade-left">
+        <div class="row mt-3 table-fluid table-responsive" id="ttexmarea" style="display: none;width: 100%;">
+            <div class="col text-center">
+                <table style="display: table;" class="table rounded table-secondary table-bordered table-striped">
+                    <thead class="thead bg-success text-white">
+                        <th colspan="5">End Term Time Table</th>
+                    </thead>
+                    <tr style="padding: 0;">
+                      <td class="p-0 bg-info text-white" colspan="5">Use <b>CLOSE</b> button below to exit fullscreen Mode</td>
+                    </tr>
+                    <tr>
+                    <tr class="bg-danger text-white">
+                        <th>Date of Examination</th>
+                        <th>Subject</th>
+                        <th>Mode of Examination (second component: 30 marks)</th>
+                        <th>Time</th>
+                        <th>Time Left</th>
+                    </tr>
+                        <td>23rd August 2021</td>
+                        <td>Data Structures and Algorithms-II</td>
+                        <td>Online Quiz + Viva</td>
+                        <td>10am to 1pm</td>
+                        <td id="tleftdsa"></td>
+                    </tr>
+                    <tr>
+                        <td>25th August 2021</td>
+                        <td>Rapid Prototyping Practice Using Object Oriented Programming</td>
+                        <td>Online Quiz</td>
+                        <td>10am to 11am</td>
+                        <td id="tleftrpp"></td>
+                    </tr>
+                    <tr>
+                      <td>26th August 2021</td>
+                      <td>Sensors and Automations</td>
+                      <td>Not Provided</td>
+                      <td>4pm to 5pm</td>
+                      <td id="tleftsa"></td>
+                  </tr>
+                    <tr>
+                        <td>28th August 2021</td>
+                        <td>Microprocessor Techniques</td>
+                        <td>Online Quiz</td>
+                        <td>10am to 11am</td>
+                        <td id="tleftmicro"></td>
+                    </tr>
+                </table>
+            </div>
+            
+        <div id="close" class="btn btn-danger" style="float: right;cursor: pointer;">Close</div>
+        </div>
+    </div>
+    
+    <!-- Wa MODAL-->
+  
+  <div class="modal fade" id="Rem" tabindex="-1" role="" style="padding-top: 10px ;position: fixed; margin-top: 10%;">
+      <div class="modal-dialog modal-login" role="document">
+          <div class="modal-content">
+              <div class="card card-signup card-plain">
+                  <div class="modal-header">
+                      <div class="card-header card-header-primary text-center">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
+                          <h4 class="card-title">Send WhatsApp Message</h4>
+                      </div>
+                  </div>
+                  <div class="modal-body">
+                      <form class="form" method="" action="">
+                          <div class="card-body">
+                              
+                          <p class="text-muted font-weight-bold">Send whatsapp message without saving their number</p>
+                              <div class="form-group bmd-form-group">
+                                  <div class="input-group">
+                                      <input type="tel"  pattern="[6-9]\d{9}$" id="wanum" autofocus style="font-size: large;font-weight: 3vw;" maxlength="10" class="font-weight-bold form-control" placeholder="Enter WhatsApp Number...">
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="modal-footer justify-content-center">
+                      <a id="openwa" class="btn text-white btn-primary btn-wd btn-lg">Open WhatsApp</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+<!-- END WA MODAL-->  
+
+    
+    <!--Main Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content bg-dark">
+              
+            <div id="time" class="mt-1 mr-1 ml-1 rounded p-2 text-white bg-danger"></div> <!--Time for ongoing class-->
+            <div class="modal-header">
+              <h5 class="modal-title text-white">Ongoing Class Schedule</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <!--  <i class="material-icons">clear</i> -->
+              &times;
+              </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <a id="link">
+                    <p id="subHere" class="p-2 rounded"></p>
+                </a>
+                <a id="latmat" style="visibility: hidden;">
+                    <p id="dislatmat" class="p-2 rounded"></p>
+                </a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL -->
+        <!-- The Modal -->
+        <div id="myImgModal" class="Imodal">
+            <span class="Iclose">&times;</span>
+            <img class="Imodal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+    
+  <!--  End Modal -->
+
+
+  <script> // To send whatsapp message
+    document.getElementById("openwa").onclick=function(){
+      var check=document.getElementById("wanum").value;
+      var phoneNumFormat=/[6-9]\d{9}$/;
+      if(!phoneNumFormat.test(check)){
+        alert("Please enter a valid phone number");
+        document.getElementById("wanum").focus();
+        return false;
+      }
+      var num="https://wa.me/+91"+document.getElementById("wanum").value;
+      location.href=num;
+    }
+  </script>
+
+  <script type="text/javascript">
+  var flag=0;
+  function changePortrait(){
+    if(flag==0){ lock('portrait-primary'); flag=1; document.getElementById('fs').innerHTML="Turn OFF Fullscreen"; }
+    else{ unlock(); flag=0; document.getElementById('fs').innerHTML="Turn ON Fullscreen";}
+  }
+  // To Display Exam time table in Fullscreen
+  
+    // exam tt ends here
+    // starts to display class tt using modal
+    document.getElementById('tt4sem').onclick=modrem;
+    function modrem(){
+        var modal = document.getElementById("myImgModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+          modal.style.display = "block";
+          modalImg.src = "./images/tt5sem.jpg";
+          captionText.innerHTML = "5th Semester Time Table";
+          document.getElementById("sectionsNav").classList.remove("fixed-top");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("Iclose")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+          document.getElementById("sectionsNav").classList.add("fixed-top");
+        }
+        // Get the modal
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.getElementById("sectionsNav").classList.add("fixed-top");
+            }
+        }
+  }
+  // class tt modal ends here 
+
+  // to display all the time and ongoing class
+    window.onload = startInterval;
+    function startInterval()
+    {
+        setInterval("startTime();",100);
+    }
+    
+    function startTime()
+    {
+        var d=new Date(); // getiing all time and date 
+        var h=d.getHours(); // hour
+        if(h.length<2){hr="0"+h} // hour to two digit
+        if(h>12){var hr=h%12; if(hr.toString().length<2){hr="0"+hr}}else{hr=h}; // hour for 12hr format
+        if(hr.toString().length<2){hr="0"+hr}; // hour
+        var m=d.getMinutes(); // minutes
+        if(m.toString().length<2){m="0"+m};  // minutes
+        var seconds=d.getSeconds(); //seconds 
+        if(seconds.toString().length<2){seconds="0"+seconds} // seconds
+        var day=d.getDay(); // day 
+        var date=d.getDate();  // date
+        var disHere=document.getElementById('subHere');  // Subject display variable
+        // // Time Left Calculation
+        // var lsec=60-seconds; var lmin=60-m; var lhr=(24-h)+10;  var lday=23-(date+1);if(lhr>23){lday=lday+1;lhr=23}
+        // if(lday==1){
+        //   var daystr=" day "
+        // }else{ var daystr=" days "}
+        // document.getElementById('tleftdsa').innerHTML=lday+daystr+lhr+" hr "+lmin+" min "+lsec+" sec ";
+        // var lsec=60-seconds; var lmin=60-m; var lhr=(24-h)+10; var lday=25-(date+1); if(lhr>23){lday=lday+1;lhr=23}
+        // if(lday==1){
+        //   var daystr=" day "
+        // }else{ var daystr=" days "}
+        // document.getElementById('tleftrpp').innerHTML=lday+daystr+lhr+" hr "+lmin+" min "+lsec+" sec ";
+
+        // var lsec=60-seconds; var lmin=60-m; var lhr=(24-h)+16; var lday=26-(date+1); if(lhr>23){lday=lday+1;lhr=23}
+        // if(lday==1){
+        //   var daystr=" day "
+        // }else{ var daystr=" days "}
+        // document.getElementById('tleftrpp').innerHTML=lday+daystr+lhr+" hr "+lmin+" min "+lsec+" sec ";
+
+        // var lsec=60-seconds; var lmin=60-m; var lhr=(24-h)+10; var lday=28-(date+1);if(lhr>23){lday=lday+1;lhr=23;}
+        // if(lday==1){
+        //   var daystr=" day "
+        // }else{ var daystr=" days "}
+        // document.getElementById('tleftmicro').innerHTML=lday+daystr+lhr+" hr "+lmin+" min "+lsec+" sec ";
+        // time left calc ends
+        var time=document.getElementById('time');
+       // time.innerHTML="Time: "+h+" hr "+m+" min "+seconds+" sec "; // For Ongoing
+        if(h==hr){ if(h==12){hr=hr+":"+m+":"+seconds+" pm"} else hr=hr+":"+m+":"+seconds+" am"}else{hr=hr+":"+m+":"+seconds+" pm"}
+        if(h==0){hr=12; hr=hr+":"+m+":"+seconds+" am"}  // For navbar assign
+        if(document.getElementById("dis_time")){document.getElementById("dis_time").innerHTML=hr;}
+        time.innerHTML=hr;
+        if(day>0 && day<=6){ // Monday to Friday
+            if(day==1){ // For Monday
+                    if(h>=9 && h<10){ noclass(); }
+                    if(h>=10 && h<11){ se(); }
+                    if(h>=11 && h<12){ dbms(); }
+                    if(h>=12 && h<13){ half(); }
+                    if(h>=13 && h<14){ coi(); }
+                    if(h>=14 && h<15){ maths(); }
+                    if(h>=15 && h<16){  ai();}
+                    if(h>=16 || h<9){ noclass(); }
+             }
+             if(day==2){ // For Tuesday
+                    if(h>=9 && h<10){ noclass(); }
+                    if(h>=10 && h<11){ dbms(); }
+                    if(h>=11 && h<12){ co(); }
+                    if(h>=12 && h<13){ half(); }
+                    if(h>=13 && h<14){ maths(); }
+                    if(h>=14 && h<15){ ai(); }
+                    if(h>=15 && h<16){ cn(); }
+                    if(h>=16 || h<9){ noclass(); }
+             }
+             if(day==3){ // For Wednesday
+                    if(h>=9 && h<10){ co(); }
+                    if(h>=10 && h<12){ se(); }
+                    if(h>=12 && h<13){ half(); }
+                    if(h>=13 && h<14){ elp(); }
+                    if(h>=14 && h<16){ dbms(); }
+                    if(h>=16 || h<9){ noclass(); }
+             }
+             if(day==4){ // For Thursday
+                   if(h>=9 && h<10){ cn(); }
+                    if(h>=10 && h<11){ dbms(); }
+                    if(h>=11 && h<12){ ai(); }
+                    if(h>=12 && h<13){ half(); }
+                    if(h>=13 && h<14){ elp(); }
+                    if(h>=14 && h<16){ ai(); }
+                    if(h>=16 || h<9){ noclass(); }
+             }
+             if(day==5){ // For Friday
+                   if(h>=9 && h<10){ noclass(); }
+                    if(h>=10 && h<11){ epp(); }
+                    if(h>=11 && h<12){ cn(); }
+                    if(h>=12 && h<13){ half(); }
+                    if(h>=13 && h<15){ maths(); }
+                    if(h>=15 && h<16){ co(); }
+                    if(h>=16 || h<9){ noclass(); }
+             }
+             if(day==6){
+                      if(h>=9 && h<10){ noclass(); }
+                      if(h>=10 && h<12){ robotics(); }
+                      if(h>=12 && h<13){ half(); }
+                      if(h>=13 && h<15){ cn(); }
+                      if(h>=16 || h<9){ noclass(); }
+             }
+            
+        }else{  // to Sunday
+                document.getElementById('spin').style.visibility="hidden";
+                disHere.innerHTML="No class today <i class='fa fa-smile-o'></i> Ask your friends for extra class";
+                disHere.setAttribute("href","#");
+                disHere.classList.add("btn-danger");
+        }
+        // function latclose(){
+        //     document.getElementById('latmat').style.visibility="hidden";
+        // }
+        function se(){
+            disHere.innerHTML="Software Engineering: Mini Project - Stage I";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/ivo-cuau-eqw");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+        function ai(){
+            disHere.innerHTML="Artificial Intelligence";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/ecy-akdm-rhh");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+        function co(){
+            disHere.innerHTML="Computer Organization";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/ode-gpfo-mxw");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+        function cn(){
+            disHere.innerHTML="Computer Networks";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/kum-ioux-ncu");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+
+        }
+        function half(){
+            disHere.innerHTML="Break";
+            document.getElementById('link').setAttribute("href","www.youtube.com");
+            disHere.classList.add("btn-danger");
+        }
+        function dbms(){
+            disHere.innerHTML="Database Management Systems ";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/ine-qaqw-xkr");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+        function robotics(){
+            disHere.innerHTML="Robotics";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/drj-rsxj-gns");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+        function noclass(){
+            document.getElementById('spin').style.visibility="hidden";
+            disHere.innerHTML="No class <i class='fa fa-smile-o'></i> you can ask your friends for extra class";
+            document.getElementById('link').setAttribute("href","#");
+            disHere.classList.add("btn-danger");
+        }
+        function epp(){
+            disHere.innerHTML="Entrepreneurship Principles and Process";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/xfd-jwew-bsq");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+        function elp(){
+            disHere.innerHTML="English Language Proficiency ";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/ceg-ewsv-gxb");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+        function coi(){
+            disHere.innerHTML="Constitution of India";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/tow-icte-qqh");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+        function maths(){
+            disHere.innerHTML="Probability and Statistics for Engineers B";
+            document.getElementById('link').setAttribute("href","https://meet.google.com/bth-ufxx-bcm");
+            disHere.classList.add("btn-success");
+            document.getElementById('spin').style.visibility="visible";
+        }
+    }
+  </script>
+  <!-- END timer and ongoin class-->
+  <footer class="footer" data-background-color="black">
+    <div class="container text-white">
+      <div class="copyright float-right">
+        &copy; Copyright 2021, made with <i class="material-icons" style="color: red;">favorite</i> by
+        <a href="#" class="text-success" target="_blank">Rem Apple</a> .
+      </div>
+    </div>
+  </footer>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="./assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
+  <script>
+    $(document).ready(function() {
+      //init DateTimePickers
+      materialKit.initFormExtendedDatetimepickers();
+
+      // Sliders Init
+      materialKit.initSliders();
+    });
+
+
+    function scrollToTimeTable() {
+      if ($('.section-timetable').length != 0) {
+        $("html, body").animate({
+          scrollTop: $('.section-timetable').offset().top
+        }, 1000);
+      }
+    }
+    
+  </script>
+  
+  <!--AOS-->
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script>
+    AOS.init();  
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+  document.getElementById('ttexm').onclick=function(){
+        if(document.getElementById('ttexmarea').style.display=="none"){
+            lock('landscape-primary');
+            document.getElementById('ttexm').innerHTML="Hide Exam Time Table";
+            document.getElementById('sectionsNav').classList.remove("fixed-top");
+            document.getElementById('main').style.display="none";
+            document.getElementById('ttexmarea').style.display="block";
+            if ($('#ttexmarea').length != 0) {
+                $("html, body").animate({
+                scrollTop: $('#ttexmarea').offset().top
+                }, 1000);
+            }
+            lock('landscape-primary');
+        }else{
+            document.getElementById('ttexm').innerHTML="Display Exam Time Table";
+            document.getElementById('sectionsNav').classList.add("fixed-top");
+            document.getElementById('ttexmarea').style.display="none";
+            document.getElementById('main').style.display="block";
+            unlock();
+            if ($('#ttexm').length != 0) {
+                $("html, body").animate({
+                scrollTop: $('#ttexm').offset().top
+                }, 1000);
+            }
+        }
+    }
+    document.getElementById('close').onclick=function(){
+        document.getElementById('ttexm').innerHTML="Display Exam Time Table";
+            document.getElementById('sectionsNav').classList.add("fixed-top");
+            document.getElementById('ttexmarea').style.display="none";
+            document.getElementById('main').style.display="block";
+            unlock();
+            if ($('#ttexm').length != 0) {
+                $("html, body").animate({
+                scrollTop: $('#ttexm').offset().top
+                }, 1000);
+            }
+    }
